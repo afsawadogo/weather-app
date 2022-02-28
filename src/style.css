@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredericka+the+Great&family=Pattaya&family=Roboto:wght@300&family=Stardos+Stencil&display=swap");
+
+:root {
+  --main-color: #494949;
+  --white: #fff;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(-45deg, #cf6747, #aa6680, #1c8ab3, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  width: 900px;
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.171);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+/*  City Information Row 1*/
+
+.city-name {
+  display: block;
+  padding: 10px 15px 0;
+  font-size: 50px;
+  background: #f5f7f8;
+  background: -webkit-repeating-linear-gradient(
+    to right,
+    #d7eaf2 0%,
+    #a8dfff 50%,
+    #b0cfce 100%
+  );
+  background: -moz-repeating-linear-gradient(
+    to right,
+    #d7eaf2 0%,
+    #a8dfff 50%,
+    #b0cfce 100%
+  );
+  background: repeating-linear-gradient(
+    to right,
+    #d7eaf2 0%,
+    #a8dfff 50%,
+    #b0cfce 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search {
+  float: right;
+  padding: 10px 5px;
+}
+
+.search-text {
+  padding: 10px 25px;
+  border-radius: 5px;
+  border-style: none;
+  border: 2px solid rgb(205, 214, 223);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-btn {
+  margin-left: 4px;
+}
+
+.search-btn,
+#current-location {
+  background-color: rgba(255, 255, 255, 0.212);
+  padding: 10px 15px;
+  border-radius: 7px;
+  border-style: none;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.search-btn:hover,
+#current-location:hover {
+  color: var(--white);
+  background-color: rgba(207, 204, 204, 0.685);
+}
+
+.search-icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+.location {
+  color: var(--white);
+  font-size: 20px;
+}
+
+/*  Date Information Row 2*/
+
+.row-2 {
+  height: 180px;
+}
+
+.date-info {
+  text-align: center;
+  padding: 14px;
+}
+.day-name {
+  color: var(--white);
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Stardos Stencil", cursive;
+  margin-bottom: 5px;
+}
+
+.date-info {
+  font-size: 17px;
+  color: var(--main-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.degree,
+.temps,
+.city-name,
+#deg-celsius,
+#deg-fahrenheit {
+  font-family: "Fredericka the Great", cursive;
+}
+
+.info {
+  margin: 40px auto 0;
+}
+
+.current-tempreture {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.current-weather-status {
+  font-size: 20px;
+}
+
+.deg-celsius,
+.deg-fahrenheit,
+.devider {
+  position: absolute;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--main-color);
+  transition: all 0.5s ease-out;
+}
+
+.deg-celsius {
+  bottom: 100px;
+  left: 60px;
+}
+.devider {
+  bottom: 108px;
+  left: 90px;
+}
+.deg-fahrenheit {
+  bottom: 104px;
+  left: 100px;
+}
+
+.current-tempreture .active {
+  color: var(--white);
+  font-size: 24px;
+  cursor: default;
+}
+
+.current-weather-img {
+  width: 160px;
+  animation: zoomInOut 6s linear infinite;
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.degree {
+  font-size: 54px;
+  color: var(--white);
+}
+
+#deg-celsius:hover,
+#deg-fahrenheit:hover {
+  color: #ffa500;
+}
+
+.details {
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.humidity,
+.wind,
+.pressure {
+  border-bottom: 2px solid #e9e2d52f;
+}
+
+/*   Information Row 3    */
+
+.col-2-edit {
+  width: 15%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgba(197, 209, 221, 0.575);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.weather-forecast-days {
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 0.6;
+  color: #ffffffc5;
+  font-weight: bold;
+  font-family: "Stardos Stencil", cursive;
+}
+
+.weather-forecast-temps {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+.weather-forecast-temps:hover {
+  color: #ffa500;
+}
+
+.weather-forecast-temps-min {
+  opacity: 0.6;
+}
+
+.city-name:hover {
+  color: var(--white);
+}
+
+.days-img {
+  width: 90px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+.git-info,
+.linkedin {
+  text-decoration: none;
+  color: #98d0e4;
+}
+.git-info:hover,
+.linkedin:hover {
+  color: #000;
+}
+.git-icon {
+  color: var(--white);
+}
