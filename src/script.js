@@ -87,6 +87,11 @@ function displayForecast(response) {
     forcastDay.children[0].innerHTML = formatDay(forecast[i].dt);
     forcastDay.children[1].src ='http://openweathermap.org/img/wn/' +forecast[i].weather[0].icon +'@2x.png';
 
+    formSearchBtn.addEventListener('click', () => {
+      min.innerHTML = conVertUnit(Math.round(forecast[i].temp.min));
+      max.innerHTML = conVertUnit(Math.round(forecast[i].temp.max));
+    });
+
     const fahrenheit = document.getElementById('deg-fahrenheit');
     fahrenheit.addEventListener('click', () => {
       min.innerHTML = conVertUnit(Math.round(forecast[i].temp.min));
